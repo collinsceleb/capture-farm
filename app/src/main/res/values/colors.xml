@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#6200EE</color>
+    <color name="colorPrimaryDark">#3700B3</color>
+    <color name="colorAccent">#03DAC5</color>
+
+    <color name="colorPrimary1">#3F51B5</color>
+    <color name="colorPrimaryDark1">#303F9F</color>
+    <color name="colorAccent1">#FF4081</color>
+    <color name="colorWhite">#ffffff</color>
+    <color name="colorWhiteAlpha60">#86ffffff</color>
+    <color name="colorWhiteAlpha20">#c5ffffff</color>
+    <color name="colorWhiteIngots">#fbfcfd</color>
+
+    <color name="colorRed">#fc6642</color>
+    <color name="colorRed1">#d32c50</color>
+
+    <color name="colorLightYellow">#fbdf23</color>
+    <color name="colorDarkYellow">#ffc700</color>
+    <color name="colorDarkIngotYellow">#ddb113</color>
+    <color name="colorOrange">#f6a627</color>
+
+    <color name="colorGreen">#3eb763</color>
+
+
+    <color name="colorShadow">#4c000000</color>
+    <color name="colorPurple">#ac57c0</color>
+    <color name="colorFacebook">#2e3192</color>
+    <color name="colorTwitter">#00aeef</color>
+    <color name="colorBlue1">#2188be</color>
+    <color name="colorBlue2">#346895</color>
+    <color name="colorBlue3">#608283</color>
+
+    <color name="colorTextWhite">#fffefe</color>
+    <color name="colorTextBlack">#ca010101</color>
+    <color name="colorLevelBlack">#c0000000</color>
+
+    <color name="colorBottomNavChecked">#af58c2</color>
+    <color name="colorBottomNavUnchecked">#b3af58c2</color>
+
+    <color name="colorGreyTint">#646464</color>
+    <color name="textColorFaded">#5c030303</color>
+    <color name="colorBlack">#000000</color>
+    <color name="colorBlue">#2962ff</color>
+</resources>

@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "64633340437",
+    "firebase_url": "https://capture-farm.firebaseio.com",
+    "project_id": "capture-farm",
+    "storage_bucket": "capture-farm.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:64633340437:android:656817788a70f77b1ec41c",
+        "android_client_info": {
+          "package_name": "com.bdn.collinsceleb.capturefarm"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "64633340437-dk2toqdjdms070v7obic6ee8b4nsaoo4.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.bdn.collinsceleb.capturefarm",
+            "certificate_hash": "7cc74ccd33f7d1b597b2c7c0b13b6e314cb10c81"
+          }
+        },
+        {
+          "client_id": "64633340437-nvvvinr8888crd9b4rh8scg3lb7vs4oq.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDfLWeOw_md228A75k8Khh2Gl1HIqLyTTE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "64633340437-nvvvinr8888crd9b4rh8scg3lb7vs4oq.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
