@@ -73,7 +73,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/phonenumber"
         android:autofillHints="" />
-    <EditText
+    <TextView
         android:id="@+id/takephotograph"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
@@ -81,8 +81,6 @@
         android:layout_marginTop="8dp"
         android:layout_marginEnd="24dp"
         android:hint="@string/photograph"
-        android:imeOptions="actionDone"
-        android:inputType="text"
         android:visibility="visible"
         android:selectAllOnFocus="true"
         app:layout_constraintEnd_toEndOf="parent"
@@ -97,14 +95,63 @@
         android:layout_marginTop="8dp"
         android:layout_marginEnd="24dp"
         android:hint="@string/display_picture"
-
         android:imeOptions="actionDone"
         android:visibility="visible"
         android:selectAllOnFocus="true"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/email"
+        app:layout_constraintTop_toBottomOf="@+id/takephotograph"
+        android:autofillHints=""
+        android:contentDescription="Picture Captured" />
+
+    <EditText
+        android:id="@+id/farmname"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="24dp"
+        android:hint="@string/farm_name"
+        android:imeOptions="actionDone"
+        android:inputType="text"
+        android:visibility="visible"
+        android:selectAllOnFocus="true"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imagedisplay"
         android:autofillHints="" />
+    <EditText
+        android:id="@+id/farmlocation"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="24dp"
+        android:hint="@string/farm_location"
+        android:imeOptions="actionDone"
+        android:inputType="text"
+        android:visibility="visible"
+        android:selectAllOnFocus="true"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/farmname"
+        android:autofillHints="" />
+
+    <TextView
+        android:id="@+id/farmcoordinates"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="24dp"
+        android:hint="@string/farm_coordinates"
+        android:visibility="visible"
+        android:selectAllOnFocus="true"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/farmlocation"
+        android:autofillHints="" />
+
 
     <Button
         android:id="@+id/submit"
@@ -120,7 +167,7 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imagedisplay"
+        app:layout_constraintTop_toBottomOf="@+id/farmcoordinates"
         app:layout_constraintVertical_bias="0.2" />
 
     <ProgressBar

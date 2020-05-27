@@ -1,7 +1,6 @@
 package com.bdn.collinsceleb.capturefarm.activities
 
 import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
 import android.view.View
@@ -10,28 +9,33 @@ import android.widget.Button
 import android.widget.EditText
 import android.widget.ProgressBar
 import android.widget.Toast
+import androidx.appcompat.app.AppCompatActivity
 import com.bdn.collinsceleb.capturefarm.R
 import com.google.firebase.auth.FirebaseAuth
-import com.google.firebase.auth.FirebaseUser
 
 class SignInActivity : AppCompatActivity() {
 
     private val TAG: String = "SignInActivity"
     private val  authStateListener:FirebaseAuth.AuthStateListener? = null
-
+    private lateinit var username : EditText
+    private lateinit var password : EditText
+    private lateinit var loginButton : Button
+    private lateinit var registerButton : Button
+    private lateinit var progressBar: ProgressBar
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_sign_in)
 
-        val username = findViewById<EditText>(R.id.username)
+         username = findViewById(R.id.username)
 
-        val password = findViewById<EditText>(R.id.password)
+         password = findViewById(R.id.password)
 
-        val loginButton = findViewById<Button>(R.id.login)
+         loginButton = findViewById(R.id.login)
+         registerButton = findViewById(R.id.register)
+        progressBar = findViewById(R.id.loading)
 
-        val registerButton = findViewById<Button>(R.id.register)
 
         setUpFirebaseAuth()
 
@@ -78,12 +82,10 @@ class SignInActivity : AppCompatActivity() {
     }
 
    private fun showDialog() {
-        val progressBar = findViewById<ProgressBar>(R.id.loading)
         progressBar.visibility = View.VISIBLE
     }
 
     private fun hideDialog() {
-        val progressBar = findViewById<ProgressBar>(R.id.loading)
         if (progressBar.visibility == View.VISIBLE) {
             progressBar.visibility = View.INVISIBLE
         }
@@ -99,11 +101,11 @@ class SignInActivity : AppCompatActivity() {
             if(user != null){
                 // User is signed in
                 Log.d(TAG, "Signed in")
-//                Toast.makeText(this, "User", Toast.LENGTH_LONG).show();
+//                Toast.makeText(this, "User", Toast.LENGTH_LONG).show()
             }else{
                 // User is signed out
                 Log.d(TAG, "Signed out")
-                Toast.makeText(this, "Null", Toast.LENGTH_LONG).show();
+                Toast.makeText(this, "Null", Toast.LENGTH_LONG).show()
             }
         }
     }

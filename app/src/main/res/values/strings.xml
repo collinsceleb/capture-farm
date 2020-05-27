@@ -16,6 +16,15 @@
     <string name="photograph">Take Picture</string>
     <string name="display_picture">Display Picture</string>
     <string name="submit">Submit</string>
+    <string name="farm_location">Farm Location</string>
+    <string name="farm_name">Farm Name</string>
+    <string name="farm_coordinates">Farm Coordinates</string>
+    <string name="autocomplete">Enter Address, City or Zip Code</string>
+    <string name="option_get_place">Get Place</string>
+    <string name="normal_map">Normal Map</string>
+    <string name="hybrid_map">Hybrid Map</string>
+    <string name="satellite_map">Satellite Map</string>
+    <string name="terrain_map">Terrain Map</string>
     <string name="action_sign_in_short">Sign in</string>
     <string name="welcome">"Welcome !"</string>
     <string name="invalid_username">Not a valid username</string>
