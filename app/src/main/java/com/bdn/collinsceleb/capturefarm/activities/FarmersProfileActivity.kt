@@ -56,7 +56,13 @@ class FarmersProfileActivity : AppCompatActivity() {
 
             hideSoftKeyboard()
         }))
+
+        submitButton.setOnClickListener((View.OnClickListener {
+            val submitIntent = Intent(this, MainActivity::class.java)
+            startActivity(submitIntent)
+        }))
     }
+
 
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
         super.onActivityResult(requestCode, resultCode, data)
