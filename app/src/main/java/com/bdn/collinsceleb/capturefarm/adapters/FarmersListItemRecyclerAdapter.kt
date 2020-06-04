@@ -43,7 +43,7 @@ class FarmersListItemRecyclerAdapter internal constructor(context: Context) :
         position: Int
     ) {
 
-        val currentInformation = records[position]
+        val currentInformation: FarmersInformation = records[position]
         holder.farmersFullNameList.text = currentInformation.fullName
         holder.farmersEmailList.text = currentInformation.email
         holder.farmersFarmAddressList.text = currentInformation.farmAddress

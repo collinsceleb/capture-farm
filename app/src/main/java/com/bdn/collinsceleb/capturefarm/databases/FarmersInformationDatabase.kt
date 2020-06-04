@@ -4,14 +4,17 @@ import android.content.Context
 import androidx.room.Database
 import androidx.room.Room
 import androidx.room.RoomDatabase
+import androidx.room.TypeConverters
 import androidx.sqlite.db.SupportSQLiteDatabase
 import com.bdn.collinsceleb.capturefarm.databases.dao.FarmersInformationDao
 import com.bdn.collinsceleb.capturefarm.models.FarmersInformation
+import com.bdn.collinsceleb.capturefarm.models.LocationConverter
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.launch
 
 
 @Database(entities = [FarmersInformation::class], version = 1, exportSchema = false)
+@TypeConverters(LocationConverter::class)
 abstract class FarmersInformationDatabase : RoomDatabase() {
     abstract fun farmersInformationDao(): FarmersInformationDao
 
@@ -24,6 +27,18 @@ abstract class FarmersInformationDatabase : RoomDatabase() {
                 scope.launch {
                     var farmersInformationDao = database?.farmersInformationDao()
                     farmersInformationDao?.deleteAll()
+
+                    var record = FarmersInformation(
+                        1,
+                        "Kolawole Seal",
+                        802797,
+                        "lovesylcol@yahoo.com",
+                        "Collinsceleb",
+                        "12, s"
+                    )
+
+                    farmersInformationDao?.insertFarmerInformation(record)
+
                 }
             }
         }
@@ -45,7 +60,9 @@ abstract class FarmersInformationDatabase : RoomDatabase() {
                     context.applicationContext,
                     FarmersInformationDatabase::class.java,
                     "capture_farm"
-                ).build()
+                )
+                    .addCallback(FarmersInformationDatabaseCallback(scope))
+                    .build()
                 INSTANCE = instance
                 return instance
             }

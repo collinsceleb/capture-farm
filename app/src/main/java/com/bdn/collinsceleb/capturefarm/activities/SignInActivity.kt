@@ -56,6 +56,7 @@ class SignInActivity : AppCompatActivity() {
                             Log.w(TAG, "signInWithEmail:failure", task.exception)
                             Toast.makeText(baseContext, "Authentication failed.",
                                 Toast.LENGTH_SHORT).show()
+                            hideDialog()
                         }
 
                     }
